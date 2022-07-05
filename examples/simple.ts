@@ -1,7 +1,7 @@
 import { Block, Blockchain } from '../src/index'
 
-let logCoin = new Blockchain();
-console.log("mining logcoin in progress...");
+let isTravCoin = new Blockchain();
+console.log("mining isTrav coin in progress...");
 
 let secret1 = JSON.stringify({ 
   sender: "Frank Joseph",
@@ -21,7 +21,7 @@ let secret3 = JSON.stringify({
   quantity: 25
 })
 
-logCoin.addNewBlock(
+isTravCoin.addNewBlock(
   new Block(
     1, // index
     1000, // when
@@ -30,11 +30,11 @@ logCoin.addNewBlock(
   )
 );
 
-logCoin.addNewBlock(
+isTravCoin.addNewBlock(
   new Block(2, 2000, secret2, undefined)
 );
-logCoin.addNewBlock(
+isTravCoin.addNewBlock(
   new Block(3, 3000, secret3, undefined)
 );
 
-console.log(JSON.stringify(logCoin, null, 5))
+console.log(JSON.stringify(isTravCoin, null, 5))
