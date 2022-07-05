@@ -1,7 +1,8 @@
 // requirements
 import Block from './Block'
-import Secret from './Secret'
 import Link from './Link'
+import Secret from './Secret'
+import User from './User'
 
 /*
 CHAIN:
@@ -25,8 +26,12 @@ export default class Blockchain {
   }
 
   createGenesisBlock() {
-    let s = new Secret(0, "1", "A", "B")
-    return new Block(0, 0, s, "0");
+    let users = [
+      new User("A"),
+      new User("B"),
+    ]
+    let data = new Secret(0, "1", users[0], users[1])
+    return new Block(0, 0, data, "0");
   }
 
   getTheLatestBlock() {

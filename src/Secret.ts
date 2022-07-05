@@ -1,6 +1,9 @@
 // shared lib
 import { StringOfLength, stringOfLength } from '../lib/StringOfLength';
 
+// requirements
+import User from './User';
+
 /*
 SECRET:
 - OTP = timestamp // when sender submitted secret
@@ -16,11 +19,11 @@ export default class Secret {
   sender: StringOfLength<1,64>;
   recipient: StringOfLength<1,64>;
 
-  constructor(otp: number, message: string, sender: string, recipient: string) {
+  constructor(otp: number, message: string, sender: User, recipient: User) {
     this.otp = otp;
     this.message = stringOfLength(message, 1, 1572864);
-    this.sender = stringOfLength(sender, 1, 64);
-    this.recipient = stringOfLength(recipient, 1, 64);
+    this.sender = stringOfLength(sender.username, 1, 64);
+    this.recipient = stringOfLength(recipient.username, 1, 64);
   }
 
   toString() {

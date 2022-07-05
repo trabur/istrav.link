@@ -1,22 +1,32 @@
-import { Block, Blockchain, Link, Secret } from '../src/index'
+import { Block, Blockchain, Link, User, Secret } from '../src/index'
 
 let blockchains = [
   new Blockchain("@username"),
   new Blockchain("/platform/"),
 ]
 
+let machines = [
+  new User('*thinkputer'),
+  new User('*coolermaster'),
+]
+
+let people = [
+  new User('@joe'),
+  new User('@john')
+]
+
 let secrets = [
   new Secret(
     1, // one time pad
     "hello there", // encrypt/decrypt
-    "Joe", // from
-    "John" // to
+    people[0], // from
+    people[1] // to
   ),
-  new Secret(2, "hello back", "John", "Joe"),
-  new Secret(3, "goodbye", "Joe", "John"),
-  new Secret(4, "ok, cya", "John", "Joe"),
-  new Secret(1, "test", "a", "b"),
-  new Secret(2, "123", "b", "a"),
+  new Secret(2, "hello back", people[1], people[0]),
+  new Secret(3, "goodbye", people[0], people[1]),
+  new Secret(4, "ok, cya", people[1], people[0]),
+  new Secret(1, "test", machines[0], machines[1]),
+  new Secret(2, "123", machines[1], machines[0]),
 ]
 
 let blocks = [
