@@ -6,13 +6,13 @@ let blockchains = [
 ]
 
 let machines = [
-  new User('*thinkputer'),
-  new User('*coolermaster'),
+  new User('thinkputer'),
+  new User('coolermaster'),
 ]
 
 let people = [
-  new User('@joe'),
-  new User('@john')
+  new User('joe'),
+  new User('john')
 ]
 
 let secrets = [
