@@ -1,8 +1,8 @@
 // import that secure hash algorithm from the crypto-js package
 import * as sha256 from 'crypto-js/sha256';
 
-// shared lib
-import { StringOfLength, stringOfLength } from '../lib/StringOfLength';
+// requirements
+import Secret from './Secret';
 
 /*
 BLOCK:
@@ -17,19 +17,19 @@ BLOCK:
 export default class Block {
   index: number;
   timestamp: number;
-  data: StringOfLength<1,2097152>; // min of 1 + max of 2MB char limit
+  data: string;
   previousHash: string;
   hash: string;
 
-  constructor(index: number, timestamp: number, data: string, previousHash: string | undefined) {
+  constructor(index: number, timestamp: number, data: Secret, previousHash: string | undefined) {
     this.index = index;
     this.timestamp = timestamp;
-    this.data = stringOfLength(data, 1, 1048576);
+    this.data = data.toString();
     this.previousHash = previousHash || "0";
     this.hash = this.generateHash();
   }
 
   generateHash() {
-    return sha256(`${this.index}:${this.timestamp}:${this.previousHash}:${JSON.stringify(this.data)}`).toString()
+    return sha256(`${this.index}:${this.timestamp}:${this.previousHash}:${this.data}`).toString()
   }
 }

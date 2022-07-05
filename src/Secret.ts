@@ -22,4 +22,8 @@ export default class Secret {
     this.sender = stringOfLength(sender, 1, 64);
     this.recipient = stringOfLength(recipient, 1, 64);
   }
+
+  toString() {
+    return JSON.stringify(this)
+  }
 }
