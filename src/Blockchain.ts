@@ -33,6 +33,7 @@ export default class Blockchain {
     return this.blockchain[this.blockchain.length - 1];
   }
 
+  // for when we just have a list of blocks and a list of links
   loadMatching(links: Array<Link>, blocks: Array<Block>) {
     // find links by blockchain id
     let bcLinks = links.filter((link) => {

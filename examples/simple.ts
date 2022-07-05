@@ -6,7 +6,12 @@ let blockchains = [
 ]
 
 let secrets = [
-  new Secret(1, "hello there", "Frank Joseph", "LogRocket"),
+  new Secret(
+    1, // one time pad
+    "hello there", // encrypt/decrypt
+    "Frank Joseph", // from
+    "LogRocket" // to
+  ),
   new Secret(2, "hello back", "LogRocket", "Frank Joseph"),
   new Secret(3, "goodbye", "Frank Joseph", "LogRocket"),
   new Secret(4, "ok, cya", "LogRocket", "Frank Joseph"),
@@ -30,8 +35,8 @@ let blocks = [
 
 let links = [
   new Link(
-    blockchains[0],
-    blocks[0]
+    blockchains[0], // for bc id
+    blocks[0] // for block hash
   ),
   new Link(
     blockchains[0],
