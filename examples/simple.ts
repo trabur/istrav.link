@@ -9,12 +9,12 @@ let secrets = [
   new Secret(
     1, // one time pad
     "hello there", // encrypt/decrypt
-    "Frank Joseph", // from
-    "LogRocket" // to
+    "Joe", // from
+    "John" // to
   ),
-  new Secret(2, "hello back", "LogRocket", "Frank Joseph"),
-  new Secret(3, "goodbye", "Frank Joseph", "LogRocket"),
-  new Secret(4, "ok, cya", "LogRocket", "Frank Joseph"),
+  new Secret(2, "hello back", "John", "Joe"),
+  new Secret(3, "goodbye", "Joe", "John"),
+  new Secret(4, "ok, cya", "John", "Joe"),
   new Secret(1, "test", "a", "b"),
   new Secret(2, "123", "b", "a"),
 ]
