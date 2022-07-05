@@ -1,8 +1,8 @@
 import { Block, Blockchain, Link, User, Secret } from '../src/index'
 
 let blockchains = [
-  new Blockchain("@username"),
-  new Blockchain("/platform/"),
+  new Blockchain("hello-world"),
+  new Blockchain("hello-computer"),
 ]
 
 let machines = [
