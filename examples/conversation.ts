@@ -13,8 +13,8 @@ john.sendMessage(joe, 'hello back')
 john.sendMessage(joe, 'hello back 2')
 
 // reports
-console.log(joe.messagesWith(john))
+console.log('joe\'s messages with john', joe.messagesWith(john))
 // -or-
 // console.log(john.messagesWith(joe))
 
-console.log('channels', joe.channels)
+console.log('joe\'s channels', joe.channels)

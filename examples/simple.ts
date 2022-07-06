@@ -17,16 +17,15 @@ let people = [
 
 let secrets = [
   new Secret(
-    1, // one time pad
     "hello there", // encrypt/decrypt
     people[0], // from
     people[1] // to
   ),
-  new Secret(2, "hello back", people[1], people[0]),
-  new Secret(3, "goodbye", people[0], people[1]),
-  new Secret(4, "ok, cya", people[1], people[0]),
-  new Secret(1, "test", machines[0], machines[1]),
-  new Secret(2, "123", machines[1], machines[0]),
+  new Secret("hello back", people[1], people[0]),
+  new Secret("goodbye", people[0], people[1]),
+  new Secret("ok, cya", people[1], people[0]),
+  new Secret("test", machines[0], machines[1]),
+  new Secret("123", machines[1], machines[0]),
 ]
 
 let blocks = [

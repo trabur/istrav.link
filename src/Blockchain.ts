@@ -30,7 +30,7 @@ export default class Blockchain {
       new User("A"),
       new User("B"),
     ]
-    let data = new Secret(0, "1", users[0], users[1])
+    let data = new Secret("1", users[0], users[1])
     return new Block(0, 0, data, "0");
   }
 

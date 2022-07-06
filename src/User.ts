@@ -32,7 +32,6 @@ export default class User {
 
     // block data
     let secret = new Secret(
-      new Date().getSeconds(),
       value,
       this,
       to
@@ -54,7 +53,7 @@ export default class User {
     blockchain.addNewBlock(
       new Block(
         latest.index + 1,
-        new Date().getSeconds(),
+        new Date().getTime(),
         secret,
         latest.hash
       )
@@ -84,7 +83,7 @@ export default class User {
     blockchain.addNewBlock(
       new Block(
         latest.index + 1,
-        new Date().getSeconds(),
+        new Date().getTime(),
         value,
         latest.hash
       )
@@ -114,9 +113,10 @@ export default class User {
   }
 
   messagesWith(user: User) {
-    let conversation = []
+    let conversation: Array<Block> = []
     conversation.push(...this.messagesFrom(user))
     conversation.push(...this.messagesTo(user))
+    conversation = conversation.sort(({ timestamp: a }, { timestamp: b }) => a-b);
     return conversation
   }
 

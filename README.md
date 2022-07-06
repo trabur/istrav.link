@@ -39,16 +39,9 @@ Secrets should be established from the very beginning then renewed every time th
 Sort of like the antikythera mechanism which could tell you where the planets position would be at any given point in time ... OTP functions the same because if an attacker obtains our KEY then they would also need to know the latest settings of the ENIGMA machine in order to decode the SECRET. 
 
 SECRET:
-- OTP = timestamp // when sender submitted secret
 - MESSAGE = "the private thing" // up to 2MB chars
 - SENDER = username // up to 64 chars
 - RECIPIENT = username // up to 64 chars
-
-KEY:
-- MASTER = LINK // block chain id and block hash
-- ROUND = number // loop counter
-- STARTED_AT = timestamp // one time pad
-- SPEED = number // rounds per second 
 
 LINK:
 - ID = reference // block chain id
@@ -64,8 +57,8 @@ BLOCK:
 CHAIN:
 - A machine that produces information // SECRET(LINK, BLOCK) // generate fake and genuine data
 - A machine that encodes information // ENIGMA(1,112,064 chars x 7 spherical-rotor) = CODE
-- A machine that shreds information // XOR(KEY, CODE) for [parity1, parity2] then destroy key & code copy
-- A machine that transfers information // DB[parity1, parity2, ...] = astro sized shared database over websockets using TCP/IP
-- A machine that assembles information // MATCH(parity1, parity2) for XOR(KEY, CODE) then destroy parity copies
+- A machine that shreds information // XOR(DECO, CODE) for [parity1, parity2] then destroy deco & code copy
+- A machine that transfers information // NETWORK[parity1, parity2, ...] = astro sized shared database over websockets using TCP/IP
+- A machine that assembles information // MATCH(parity1, parity2) for XOR(CODE, DECO) then destroy parity copies
 - A machine that decodes information // DEIGMA(1,112,064 chars x 7 spherical-rotor) = CODE
 - A machine that consumes information // SECRET(LINK, BLOCK) // obtain fake and genuine data
