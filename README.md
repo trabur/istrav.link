@@ -39,7 +39,7 @@ Secrets should be established from the very beginning then renewed every time th
 Sort of like the antikythera mechanism which could tell you where the planets position would be at any given point in time ... OTP functions the same because if an attacker obtains our KEY then they would also need to know the latest settings of the ENIGMA machine in order to decode the SECRET. 
 
 SECRET:
-- MESSAGE = "the private thing" // up to 2MB chars
+- MESSAGE = "the private thing" // up to 1.5MB chars
 - SENDER = username // up to 64 chars
 - RECIPIENT = username // up to 64 chars
 
@@ -50,7 +50,7 @@ LINK:
 BLOCK:
 - INDEX = number // position in the chain
 - TIMESTAMP = timestamp // when block was added to the chain sometime after previous hash
-- DATA = "the private thing" // SECRET up to 1MB chars
+- DATA = "the private thing" // SECRET up to 1.6MB chars
 - PREVIOUS_HASH = "48y3fuhfo437hf3fuh..." // sum of previous block
 - HASH = "4fg30q87fgublfa839..." // sum of current block
 

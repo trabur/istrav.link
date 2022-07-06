@@ -6,7 +6,7 @@ import User from './User';
 
 /*
 SECRET:
-- MESSAGE = "the private thing" // up to 2MB chars
+- MESSAGE = "the private thing" // up to 1.5MB chars
 - SENDER = username // up to 64 chars
 - RECIPIENT = username // up to 64 chars
 */
