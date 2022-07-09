@@ -1,11 +1,6 @@
-co.istrav.network
+istrav.link
 ========
-
-coin:
-- cipher: a secret or disguised way of writing; a code.
-- optimized: make the best or most effective use of (a situation, opportunity, or resource).
-- istrav: innovation management system: storage and processing.
-- network: an arrangement of intersecting horizontal and vertical lines.
+Checkout the examples for demonstration on how to use this library.
 
 ### Why?
 In the military higher ranking members who are commanders execute orders by telling lower ranking members what to do, such as attack or defend, or where to go. Which is known as the chain of command. Anyways, because the military fights it's enimies in foreign and domestic territories, their method of communication between one another must be kept private and not made public no matter what. If the enimy were to do this ... for example: wire tap a connection between two commanders ... it would reveal sensitive information such as the location of all our strategic submarines. Not good. 
