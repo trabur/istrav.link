@@ -50,10 +50,10 @@ BLOCK:
 - HASH = "4fg30q87fgublfa839..." // sum of current block
 
 CHAIN:
-- A machine that produces information // SECRET(LINK, BLOCK) // generate fake and genuine data
+- A machine that produces information // JAM(LINK, BLOCK) // generate fake and genuine data
 - A machine that encodes information // ENIGMA(1,112,064 chars x 7 spherical-rotor) = CODE
 - A machine that shreds information // XOR(DECO, CODE) for [parity1, parity2] then destroy deco & code copy
 - A machine that transfers information // NETWORK[parity1, parity2, ...] = astro sized shared database over websockets using TCP/IP
 - A machine that assembles information // MATCH(parity1, parity2) for XOR(CODE, DECO) then destroy parity copies
 - A machine that decodes information // DEIGMA(1,112,064 chars x 7 spherical-rotor) = CODE
-- A machine that consumes information // SECRET(LINK, BLOCK) // obtain fake and genuine data
+- A machine that consumes information // JAM(LINK, BLOCK) // obtain fake and genuine data

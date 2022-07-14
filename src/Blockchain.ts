@@ -6,13 +6,13 @@ import User from './User'
 
 /*
 CHAIN:
-- A machine that produces information // SECRET(LINK, BLOCK) // generate fake and genuine data
+- A machine that produces information // JAM(LINK, BLOCK) // generate fake and genuine data
 - A machine that encodes information // ENIGMA(1,112,064 chars x 7 spherical-rotor) = CODE
 - A machine that shreds information // XOR(KEY, CODE) for [parity1, parity2] then destroy key & code copy
 - A machine that transfers information // DB[parity1, parity2, ...] = astro sized shared database over websockets using TCP/IP
 - A machine that assembles information // MATCH(parity1, parity2) for XOR(KEY, CODE) then destroy parity copies
 - A machine that decodes information // DEIGMA(1,112,064 chars x 7 spherical-rotor) = CODE
-- A machine that consumes information // SECRET(LINK, BLOCK) // obtain fake and genuine data
+- A machine that consumes information // JAM(LINK, BLOCK) // obtain fake and genuine data
 */
 
 // create a JavaScript class to represent a Blockchain
